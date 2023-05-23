@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customer Manager Form</title>
+    <link rel="stylesheet" href="../assets/normalize.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fonts/css/all.min.css">
+    <style>
+        .new{
+            background-color: #54a946 !important;
+            color: white!important;
+        }
+        .new:hover{
+            background-color: #22FF00!important;
+            color: white!important;
+        }
+
+        .up{
+            background-color: #FFD43B;
+            color: white!important;
+        }
+        .up:hover{
+             background-color: #FFFF00;
+             color: white!important;
+         }
+        input{
+            background-color: #CEE1F4!important;
+            border: 1px solid #0078D7 !important;
+        }
+
+        input:focus{
+            background-color: #8ff397 !important;
+            border: 1px solid #00d71d !important;
+        }
+    </style>
+</head>
+<body>
+
+<!---------------------------Navbar End ---------------------------------------->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark tbl" data-bs-theme="dark">
+
+    <div class="container-fluid">
+        <a class="navbar-brand text-uppercase fw-bolder  nav" href="../index.html#home">POS System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarScroll">
+
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link active nav" aria-current="page" href="../index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active nav" aria-current="page" href="#customer">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active nav" aria-current="page" href="../pages/Item.html#item">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active nav" aria-current="page" href="../pages/Order.html#order">Order</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!--------------------------- Navbar End ---------------------------------------->
+
+<!--------------------------- Customer Start ---------------------------------------->
+
+<main id="customer">
+
+    <section class="container-fluid">
+
+        <div id="log" class="row mt-2">
+
+            <div class="col-12">
+                <h3><i class="fa-solid fa-users"></i> Customer Manager</h3>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <!------------------  row1>col Form Start --------------------->
+            <div class="col-12 col-sm-12 col-md-6">
+
+                <div class="mb-3 row">
+                    <label for="customerSearch" class="col-form-label">Search Customer</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="customerSearch" >
+                    </div>
+                    <div class="col-12 col-sm-3 mt-2 m-sm-0">
+                        <button type="button" class="btn btn-success w-100">Search</button>
+                    </div>
+
+                </div>
+
+                <div class="row mb-3">
+                    <div class="row justify-content-end pe-0">
+                        <div class="col-12 col-sm-3 m-sm-0  p-sm-0 ps-sm-4">
+<!--                            <button type="button" class="btn btn-danger w-100">Add New</button>-->
+
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-danger w-100 new border-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fa-solid fa-plus"></i> New
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Customer Form</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body container-fluid">
+
+                                            <div class="row mt-3">
+
+                                                <div class="col-12">
+
+                                                    <div class="row">
+                                                        <!--------------------ID--------------------->
+                                                        <div class="col-12 ">
+                                                            <div class="mb-3 row justify-content-between">
+                                                                <label for="customerIdNew" class="col-sm-2 col-form-label">ID</label>
+                                                                <div class="col-sm-8">
+                                                                    <input type="text" class="form-control" id="customerIdNew">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--------------------Dec--------------------->
+                                                        <div class="col-12 ">
+                                                            <div class="mb-3 row justify-content-between">
+                                                                <label for="customerNameNew" class="col-sm-2 col-form-label">Name</label>
+                                                                <div class="col-sm-8">
+                                                                    <input type="text" class="form-control" id="customerNameNew">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--------------------QTy--------------------->
+                                                        <div class="col-12 ">
+                                                            <div class="mb-3 row justify-content-between">
+                                                                <label for="customerAddressNew" class="col-sm-2 col-form-label">Address</label>
+                                                                <div class="col-sm-8">
+                                                                    <input type="text" class="form-control" id="customerAddressNew">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--------------------Price--------------------->
+                                                        <div class="col-12 ">
+                                                            <div class="mb-3 row column-gap-lg-4 justify-content-between ">
+                                                                <label for="customerContactNew" class="col-sm-2  col-form-label ">Contact</label>
+                                                                <div class="col-sm-8 ">
+                                                                    <input type="text" class="form-control" id="customerContactNew">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <!------------------------Form End (id nam ...)---------------------------->
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="customerId" class="col-sm-2 col-form-label">ID</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="customerId">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="customerName" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="customerName">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="customerAddress" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="customerAddress">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="customerContact" class="col-sm-2 col-form-label">Contact</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="customerContact">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="row justify-content-end pe-sm-0-0">
+                        <div class="col-12 col-sm-3 m-sm-0">
+                            <button type="button" class="btn up w-100"><i class="fa-solid fa-arrows-rotate"></i> Update</button>
+                        </div>
+                        <div class="col-12 col-sm-3 m-sm-0 p-sm-0 mt-2 mt-sm-0">
+                            <button type="button" class="btn btn-danger w-100"><i class="fa-solid fa-trash"></i> Delete</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!------------------  row1>col Form End    --------------------->
+            <!------------------  row2>col Table Start --------------------->
+            <div class="col-12 col-sm-12 col-md-6">
+
+                <table class="table table-bordered  table-hover ">
+                    <thead class="table-dark">
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Address</td>
+                        <td>Contact</td>
+                    </tr>
+                    </thead>
+
+                    <tbody class="table-success">
+                    <tr>
+                        <td>S001</td>
+                        <td>Tharindu</td>
+                        <td>Mathara</td>
+                        <td>0702026486</td>
+                    </tr>
+
+                    <tr>
+                        <td>S001</td>
+                        <td>Tharindu</td>
+                        <td>Mathara</td>
+                        <td>0702026486</td>
+                    </tr>
+
+                    <tr>
+                        <td>S001</td>
+                        <td>Tharindu</td>
+                        <td>Mathara</td>
+                        <td>0702026486</td>
+                    </tr>
+
+                    <tr>
+                        <td>S001</td>
+                        <td>Tharindu</td>
+                        <td>Mathara</td>
+                        <td>0702026486</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+            <!------------------  row2>col Table End --------------------->
+        </div>
+
+    </section>
+
+</main>
+
+<!--------------------------- Customer End ---------------------------------------->
+
+
+<script src="../assets/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>POS System</title>
+    <link rel="stylesheet" href="assets/normalize.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        .nav:hover{
+            color: green !important;
+        }
+
+        main{
+            border: 1px solid crimson;
+        }
+    </style>
+</head>
+<body>
+
+<!---------------------------Navbar End ---------------------------------------->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark tbl" data-bs-theme="dark">
+
+        <div class="container-fluid">
+            <a class="navbar-brand text-uppercase fw-bolder  nav" href="#home">POS System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarScroll">
+
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active nav" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav" aria-current="page" href="pages/Customer.html">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav" aria-current="page" href="#">Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav" aria-current="page" href="#">Order</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+<!--------------------------- Navbar End ---------------------------------------->
+
+<!--------------------------- Home Start ---------------------------------------->
+
+<main class="container-fluid mt-3" id="home">
+
+<!------------    main row -------------->
+    <section >
+
+        <!------------    card col -------------->
+        <div >
+
+            <!------------    card col>row -------------->
+            <div class="row justify-content-sm-around">
+
+                <!------------    card col>row>col 1 -------------->
+                <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+
+                    <div class="card " style="width: 100%;">
+                        <div class="card-body">
+                            <h5 class="card-title">Customers</h5>
+                            <p class="card-text">10</p>
+                            <a href="#" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!------------    card col>row>col 1 End-------------->
+                <!------------    card col>row>col 2 -------------->
+                <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+
+                    <div class="card " style="width: 100%;">
+                        <div class="card-body">
+                            <h5 class="card-title">Items</h5>
+                            <p class="card-text">10</p>
+                            <a href="#" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!------------    card col>row>col 2 End-------------->
+                <!------------    card col>row>col 3 -------------->
+                <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+
+                    <div class="card " style="width: 100%;">
+                        <div class="card-body">
+                            <h5 class="card-title">Orders</h5>
+                            <p class="card-text">10</p>
+                            <a href="#" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!------------    card col>row>col 3 End -------------->
+            </div>
+            <!------------    card col>row End -------------->
+
+        </div>
+        <!------------    card col End -------------->
+<!--        <div></div>-->
+
+    </section>
+    <!------------    main row End-------------->
+
+</main>
+
+<!--------------------------- Home End   ---------------------------------------->
+
+
+<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

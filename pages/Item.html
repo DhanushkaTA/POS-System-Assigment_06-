@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customer Manager Form</title>
+    <link rel="stylesheet" href="../assets/normalize.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fonts/css/all.min.css">
+    <style>
+        body{
+            background-color: #F0F1F3;
+        }
+
+        body>main>section{
+            background-color: #F0F1F3;
+        }
+
+        body>main>section>div:nth-child(1){
+            background-color: #ffffff;
+            /*border: 1px solid black;*/
+            /*border-radius: 0%;*/
+        }
+
+        label{
+            font-weight: bolder;
+        }
+
+        input{
+            background-color: #CEE1F4!important;
+            border: 1px solid #0078D7 !important;
+        }
+
+        input:focus{
+            background-color: #8ff397 !important;
+            border: 1px solid #00d71d !important;
+        }
+
+
+        .m_r{
+            margin-right: 28px;
+        }
+
+        .new{
+            background-color: #22FF00!important;
+            color: white!important;
+        }
+
+    </style>
+</head>
+<body>
+
+<!---------------------------Navbar End ---------------------------------------->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark tbl" data-bs-theme="dark">
+
+    <div class="container-fluid">
+        <a class="navbar-brand text-uppercase fw-bolder  nav" href="../index.html#home">POS System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarScroll">
+
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link active nav" aria-current="page" href="../index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active nav" aria-current="page" href="../pages/Customer.html#customer">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active nav" aria-current="page" href="#item">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active nav" aria-current="page" href="../pages/Order.html">Order</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!--------------------------- Navbar End ---------------------------------------->
+
+<!--------------------------- Item Start ---------------------------------------->
+<main id="item" class="container-fluid mt-2">
+
+    <section class="row justify-content-center">
+
+        <div id="log" class="row mt-1 mb-2">
+
+            <div class="col-12">
+                <h3><i class="fa-brands fa-shopify"></i> Item Manager</h3>
+            </div>
+
+        </div>
+
+
+        <div class="col-12 col-md-11 col-lg-10 p-2 rounded border border-dark">
+
+            <!------------------------row 01(Search box)---------------------------->
+            <div class="row ">
+
+                <div class="col-12 mt-2">
+
+                    <div class="row justify-content-md-between ">
+                        <div class="col-12 col-md-2 text-center text-capitalize ">
+                            <label for="customerSearch" class="col-form-label fw-bolder ">Search Here</label>
+                        </div>
+                        <div class="col-12 col-md-6  ">
+                            <input type="text" class="form-control" id="customerSearch" >
+                        </div>
+                        <div class="col-12 col-md-2 mt-2 mt-md-0">
+                            <button type="button" class="btn btn-success w-100"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------row 01 End (Search box)---------------------------->
+
+            <!------------------------row 02(Add new)---------------------------->
+            <div class="row justify-content-md-end mt-2">
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn col-12 col-md-2 new" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fa-solid fa-plus"></i> New
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body container-fluid">
+
+                                <div class="row mt-3">
+
+                                    <div class="col-12">
+
+                                        <div class="row">
+                                            <!--------------------ID--------------------->
+                                            <div class="col-12 ">
+                                                <div class="mb-3 row justify-content-between">
+                                                    <label for="itemIdNew" class="col-sm-2 col-form-label">ID</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="itemIdNew">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--------------------Dec--------------------->
+                                            <div class="col-12 ">
+                                                <div class="mb-3 row justify-content-between">
+                                                    <label for="itemDesNew" class="col-sm-2 col-form-label">Description</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="itemDesNew">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--------------------QTy--------------------->
+                                            <div class="col-12 ">
+                                                <div class="mb-3 row justify-content-between">
+                                                    <label for="itemQtyNew" class="col-sm-2 col-form-label">Qty</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="itemQtyNew">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--------------------Price--------------------->
+                                            <div class="col-12 ">
+                                                <div class="mb-3 row column-gap-lg-4 justify-content-between ">
+                                                    <label for="itemPriceNew" class="col-sm-2  col-form-label ">Price</label>
+                                                    <div class="col-sm-8 ">
+                                                        <input type="text" class="form-control" id="itemPriceNew">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!------------------------Form End (id nam ...)---------------------------->
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!------------------------row 02 End (Add new)---------------------------->
+
+            <!------------------------row 03(id name )---------------------------->
+            <div class="row mt-3">
+
+                <div class="col-12">
+
+                    <div class="row">
+                        <!--------------------ID--------------------->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="mb-3 row justify-content-between">
+                                <label for="itemId" class="col-sm-2 col-form-label">ID</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="itemId">
+                                </div>
+                            </div>
+                        </div>
+                        <!--------------------Des--------------------->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="mb-3 row justify-content-between">
+                                <label for="itemDes" class="col-sm-2 col-form-label">Description</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="itemDes">
+                                </div>
+                            </div>
+                        </div>
+                        <!--------------------Price--------------------->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="mb-3 row justify-content-between">
+                                <label for="itemPrice" class="col-sm-2 col-form-label">Price</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="itemPrice">
+                                </div>
+                            </div>
+                        </div>
+                        <!--------------------Qty--------------------->
+                        <div class="col-12 col-md-6 col-lg-12 ">
+                            <div class="mb-3 row column-gap-lg-4 justify-content-between justify-content-lg-start">
+                                <label for="itemQty" class="col-sm-2 col-lg-1 col-form-label ">Qty</label>
+                                <div class="col-sm-8 col-lg-2">
+                                    <input type="text" class="form-control" id="itemQty">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!------------------------row 03 End (id nam ...)---------------------------->
+            <!------------------------row 04 Start (Buttons)---------------------------->
+
+            <div class="row justify-content-md-end">
+
+                <div class="btn-group col-md-3" role="group" aria-label="Basic mixed styles example">
+                    <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Delete</button>
+                    <button type="button" class="btn btn-warning"><i class="fa-solid fa-arrows-rotate"></i> Update</button>
+                </div>
+
+            </div>
+            <!------------------------row 04 End (Buttons)---------------------------->
+        </div>
+        <!------------------------col 1 End (Form)---------------------------->
+
+        <div class="col-12 col-md-11 col-lg-10 mt-5">
+
+            <table class="table table-bordered  table-hover ">
+                <thead class="table-dark">
+                <tr>
+                    <td>ID</td>
+                    <td>Description</td>
+                    <td>Price</td>
+                    <td>Qty</td>
+                </tr>
+                </thead>
+
+                <tbody class="table-success">
+                <tr>
+                    <td>I001</td>
+                    <td>Chocolate 100g</td>
+                    <td>500.00</td>
+                    <td>400</td>
+                </tr>
+
+                <tr>
+                    <td>I001</td>
+                    <td>Chocolate 100g</td>
+                    <td>500.00</td>
+                    <td>400</td>
+                </tr>
+
+                <tr>
+                    <td>I001</td>
+                    <td>Chocolate 100g</td>
+                    <td>500.00</td>
+                    <td>400</td>
+                </tr>
+
+                <tr>
+                    <td>I001</td>
+                    <td>Chocolate 100g</td>
+                    <td>500.00</td>
+                    <td>400</td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+<!--------------------------- Item End ---------------------------------------->
+
+<script src="../assets/js/bootstrap.min.js"></script>
+</body>
+</html>
